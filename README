@@ -1,0 +1,44 @@
+Solveur en cours de développement.
+
+Principe :
+
+ 1) Pour chaque point, utiliser dijkstra pour calculer le plus court chemin vers tous les autres points d’un point de vue distance pure => Complexité O() car dijkstra = O(n²) pour n points
+Temps max de calcul pour 1000 points (=1 000 000 000 opérations ) avec un processeur 2Ghz (= 2 000 000 000 opérations/ seconde) = 0.5 secondes !!
+Ce calcul n’est à faire qu’une seule fois pour chaque office de tourisme. Il ne dépend pas de l’user.
+
+
+2) L’user défini ses préférences ==> Calcul des 3 scores pour chaque point (tps moy, tps min, passage à côté) ==> Calcul très rapide.
+
+
+3) Réduction du graphe à ce que pourrait parcourir l’utilisateur à vol d’oiseau dans l’intervalle de temps qu’il a défini (cercle de centre le point de départ).
+
+
+4) Si l’arrivée n’est pas dans ce cercle, l’utilisateur est invité à refaire une requête différente
+
+
+5) Algorithme de proposition de chemins au sein des points appartenant au cercle :
+
+
+Sélectionner le point de départ, d’arrivée.
+Calcul du temps minimal que prendrait un trajet ne visitant que ces points, en utilisant la base des distances précalculées.
+Si la durée appartient à l’intervalle user alors on continue. Sinon impossible. retour au 4)
+6) Sélectionner le point ayant le meilleur score
+7) Vérifier que la durée minimale de la visite de ce point est inférieure au temps restant
+8) Calcul du temps minimal que prendrait un trajet ne visitant que ces points, en utilisant la base des distances précalculées.
+9) Si la durée est OK, on retourne à 6) en gardant ce point et en sélectionnant le point suivant dans l’ordre des meilleurs scores.
+Sinon, on note ce point comme étant invisitable et on retourne à 6)
+
+
+On continue tant que :
+- Il reste des points visitables
+ET
+- Le temps restant suite à l’itineraire actuel est strictement supérieur au temps de visite du POI de plus petit temps de visite
+ET
+        - Le calcul n’a pas duré plus d’un temps raisonnable (0.5 sec par exemple) (PAS IMPLEMENTE)
+
+
+
+
+
+
+10) Eventuellement, un algorithme génétique peut être appliqué pour affiner le résultat (PAS IMPLEMENTE)
