@@ -1,0 +1,783 @@
+François Mitterrand
+1118
+2695
+Tourmaline
+1202
+2723
+Schoelcher
+1309
+2756
+Frachon
+1453
+2816
+Neruda
+1589
+2889
+Tertre
+1690
+3020
+Romanet
+1673
+3156
+Mendès France-Bellevue
+1627
+3291
+Romain Rolland
+1673
+3362
+Lauriers
+1751
+3434
+Jean Moulin
+1843
+3322
+Jamet
+1781
+3205
+Croix Bonneau
+1930
+3226
+Egalité
+2100
+3242
+Du Chaffault
+2265
+3311
+Gare Maritime
+2495
+3341
+Chantiers Navals
+2684
+3244
+Médiathèque
+2869
+3165
+Commerce
+2998
+3067
+Bouffay
+3130
+3003
+Duchesse Anne
+3277
+2929
+Gare SNCF Nord
+3407
+2869
+Manufacture
+3558
+2828
+Moutonnerie
+3705
+2790
+Hopital Bellier
+3941
+2729
+Boulevard de Doulon
+4077
+2574
+Mairie de Doulon
+4109
+2501
+Landreau
+4181
+2261
+Souillarderie
+4190
+1976
+Pin Sec
+4130
+1748
+Haluchère
+4052
+1572
+Halvêque
+4053
+1183
+Beaujoire
+3928
+1126
+Gare de Pont Rousseau
+3214
+3955
+Pont Rousseau
+3222
+3986
+Pirmil
+3396
+3789
+Mangin
+3351
+3572
+Wattignies
+3316
+3489
+Vincent Gâche
+3254
+3356
+Aimé Delrue
+3194
+3240
+Hôtel Dieu
+3111
+3140
+Commerce
+3017
+2987
+Place du Cirque
+2978
+2861
+50 Otages
+3026
+2762
+Saint Mihiel
+3085
+2617
+Motte Rouge
+3087
+2419
+Saint Felix
+3012
+2319
+Michelet-Sciences
+3009
+2099
+Morrhonnière Petit Port
+3007
+1883
+Facultés
+3012
+1707
+Ecole Centrale
+3147
+1532
+Recteur Schmitt
+3114
+1408
+Bourgeonnière
+2938
+1354
+Boissière
+2760
+1273
+Santos Dumont
+2684
+1094
+Chêne des Anglais
+2515
+990
+René Cassin
+2454
+902
+Le Cardo
+2214
+984
+Orvault Grand Val
+1992
+964
+Neustrie
+2010
+4535
+Les Couëts
+2181
+4447
+Grande Ouche
+2337
+4394
+Trocardière
+2608
+4366
+Espace Diderot
+2851
+4306
+Château de Rezé
+2942
+4289
+Balinière
+3088
+4223
+8 Mai
+3177
+4063
+Pont Rousseau
+3224
+3988
+Pirmil
+3380
+3781
+Mangin
+3333
+3580
+Wattignies
+3294
+3497
+Vincent Gâche
+3233
+3363
+Aimé Delrue
+3174
+3251
+Hôtel Dieu
+3096
+3152
+Commerce
+2999
+2995
+Bretagne
+2940
+2873
+Jean Jaurès
+2887
+2825
+Viarme-Talensac
+2847
+2732
+Poitou
+2735
+2564
+Felix Faure
+2631
+2470
+Rond Point de Vannes
+2535
+2348
+Sainte Thérèse
+2400
+2228
+Longchamp
+2261
+2129
+Beauséjour
+2117
+2026
+Plaisance
+1980
+1907
+Ferrière
+1991
+1746
+Jean Rostand
+1956
+1659
+Bignon
+1879
+1499
+Orvault-Morlière
+1770
+1622
+Sillon de Bretagne
+1654
+1679
+Marcel Paul
+1553
+1663
+Foch-Cathédrale
+3215
+2812
+Duchesse Anne
+3279
+2928
+Cité des Congrès
+3345
+3049
+Tripode
+3472
+3274
+Ile de Nantes
+3528
+3374
+Beaulieu
+3590
+3479
+Greneraie
+3668
+3615
+Bonne garde
+3743
+3746
+Clos Toreau
+3832
+3905
+Mauvoisins
+3900
+4021
+Bourdonnières
+4042
+4168
+Joliverie
+4135
+4088
+Chapeau Verni
+4294
+4109
+Maraîchers
+4299
+4262
+Porte de Vertou
+4419
+4452
+Facultés
+3017
+1664
+Guy Mollet
+3075
+1533
+Ecole Centrale
+3158
+1539
+Grande Censive
+3209
+1385
+Recteur Schmitt
+3124
+1373
+Riviere
+2993
+1112
+Batignolles
+3795
+1232
+Beaujoire
+3906
+1125
+Roseraie
+3829
+1004
+Rendez-Vous des Pêcheurs
+3881
+878
+Linot
+3930
+831
+Cimetière Saint Joseph
+4034
+776
+Potiron
+4106
+731
+Port La Blanche
+4187
+669
+Brouillard
+4229
+620
+Moulin Porterie
+4261
+538
+Christian Pauc
+4261
+484
+Chantrerie
+4261
+430
+Ecole Vétérinaire
+4261
+379
+Gachet 1
+4259
+319
+Gachet 2
+4258
+319
+Beaujoire
+3934
+1111
+Roseraie
+3837
+1003
+Rendez-Vous des Pêcheurs
+3888
+884
+Linot
+3934
+840
+Cimetière Saint Joseph
+4036
+786
+Potiron
+4111
+739
+Port La Blanche
+4191
+679
+Brouillard
+4236
+626
+Moulin de Porterie
+4271
+538
+Christian Pauc
+4271
+484
+Chantrerie
+4270
+431
+Ecole Vétérinaire
+4270
+380
+Gachet 1
+4271
+321
+Gachet 2
+4271
+321
+Guibliniere
+4272
+290
+Porte Douillard
+4289
+279
+Savaudière
+4341
+280
+Boisbonne
+4391
+281
+Erdreau
+4409
+220
+Fleuriaye
+4422
+153
+Briand
+4487
+171
+Jules Verne
+4521
+201
+Carquefou Centre
+4552
+180
+Hôtel De Ville
+4551
+146
+Charbonneau
+4549
+111
+Jules Verne
+4192
+1562
+Patis Rondin
+4183
+1621
+Pré Hervé
+4174
+1706
+Pin Sec
+4131
+1810
+Bottière
+4120
+1909
+Lippmann
+4049
+1981
+Marrière
+3951
+2036
+Bois Robillard
+4081
+2124
+Desmoulins
+4023
+2223
+Enchanterie
+3959
+2340
+Mitrie
+3892
+2408
+Dalby
+3795
+2538
+Casterneau
+3729
+2488
+Pipay
+3570
+2541
+Gambetta
+3518
+2636
+Bouteillerie
+3379
+2712
+Trebuchet
+3315
+2799
+Foch-Cathédrale
+3186
+2800
+Saint Pierre
+3129
+2834
+Hôtel de Ville
+3089
+2852
+Place du Cirque
+3016
+2879
+Commerce
+3049
+2976
+Graslin
+2840
+3065
+Jean V
+2733
+3122
+Sanitat
+2646
+3174
+René Bouhier
+2611
+3209
+Cuvier
+2501
+3181
+Mellinet
+2432
+3154
+Vaucanson
+2294
+3099
+Zola
+2160
+3043
+Convention
+2144
+3163
+Egalité
+2133
+3236
+Mairie de Chantenay
+2119
+3327
+Marseillaise
+1997
+3323
+Bourderies
+1921
+3351
+Jean Moulin
+1860
+3325
+Croix Bonneau
+1909
+3211
+Paul Bert
+1873
+3065
+Petit Breton
+1836
+3063
+Floride
+1783
+3057
+Tertre
+1722
+3032
+Le Pellerin Bac
+451
+3575
+Le Pellerin
+451
+3646
+Ecoles
+451
+3694
+Tour Eiffel
+451
+3745
+Clos Roux
+452
+3793
+Tertre
+450
+3843
+Moulin Rotard
+451
+3893
+Télindière
+451
+3944
+Saint Jean De Boiseau
+452
+3993
+Clotais
+452
+4042
+Croix Truin
+452
+4093
+Stade
+451
+4143
+Vieux Four
+452
+4194
+Chat-Qui-Guette
+452
+4243
+Briandiere
+451
+4292
+La Montagne
+450
+4343
+Cimetière La Montagne
+452
+4392
+Gilarderie
+452
+4443
+Petit Bois
+450
+4492
+Château D'Aux
+471
+4542
+Coteaux
+562
+4542
+Ravardière
+651
+4542
+La Marche
+733
+4542
+Roche Ballue
+794
+4542
+Pagerie
+855
+4541
+Beau Soleil
+1009
+4566
+Bois Jaulin
+1149
+4568
+Beauvoir
+1245
+4541
+Pottier
+1335
+4569
+Paimboeuf
+1381
+4617
+Bellevue
+1453
+4600
+Parc Bouvre 1
+1613
+4624
+Parc Bouvre 2
+1649
+4640
+Piano'cktail
+1708
+4646
+Gautellerie
+1765
+4595
+Bastille
+1970
+4497
+Neustrie
+1990
+4524
+Christian Pauc
+4264
+483
+Moulin Porterie
+4266
+539
+Brouillard
+4230
+621
+Port la Blanche
+4184
+674
+Potiron
+4107
+735
+Cim. St-Joseph
+4032
+781
+Linot
+3929
+836
+RDV des Pêcheurs
+3884
+880
+Roseraie
+3832
+1003
+Beaujoire
+3930
+1110
+Batignolles
+3795
+1232
+Ranzay
+3792
+1394
+Renaudière
+3790
+1476
+Pontecorvo
+3752
+1587
+Keren
+3695
+1703
+Eraudière
+3663
+1793
+Port Boyer
+3514
+1865
+Pouliguen
+3410
+1922
+Trémissinière
+3354
+2003
+Lemoine
+3271
+2123
+Montbazon
+3454
+2144
+Rd-Pt de Paris
+3606
+2177
+Chalâtres
+3766
+2273
+St-Donatien
+3472
+2386
+Desaix
+3406
+2496
+Chanzy
+3337
+2624
+St-Clément
+3286
+2691
+Foch-Cathédrale
+3188
+2801
+St-Pierre
+3129
+2837
+Hôtel de Ville
+3089
+2850
+Place du Cirque
+3017
+2876

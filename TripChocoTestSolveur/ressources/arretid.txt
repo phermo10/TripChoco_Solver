@@ -1,0 +1,270 @@
+-- Line-1
+BJOI2-Beaujoire-33
+BDOU1-Boulevard de Doulon-26
+BOFA1-Bouffay-20
+CNAV1-Chantiers Navals-17
+COMC1-Commerce-19
+XBON1-Croix Bonneau-13
+DCFF1-Du Chaffault-15
+DCAN1-Duchesse Anne-21
+EGLI1-Egalité-14
+FMIT1-François Mitterrand-1
+FRAC1-Frachon-4
+GMAR1-Gare Maritime-16
+GSNO1-Gare SNCF Nord-22
+HALU1-Haluchère-31
+HAVE1-Halvêque-32
+HBLI1-Hopital Bellier-25
+JAME1-Jamet-12
+JMLI1-Jean Moulin-11
+LDRE1-Landreau-28
+LAUR1-Lauriers-10
+MDOU1-Mairie de Doulon-27
+MNFA1-Manufacture-23
+MDTH1-Médiathèque-18
+BLVU1-Mendès France-Bellevue-8
+MOUT1-Moutonnerie-24
+NRDA1-Neruda-5
+PISE1-Pin Sec-30
+RROL1-Romain Rolland-9
+RMNE1-Romanet-7
+SECH1-Schoelcher-3
+SOUI1-Souillarderie-29
+TENA1-Tertre-6
+TMLI1-Tourmaline-2
+-- Line-2
+OTAG1-50 Otages-11
+ADEL1-Aimé Delrue-7
+BOSI1-Boissière-21
+BOGE1-Bourgeonnière-20
+CDAN1-Chêne des Anglais-23
+COME1-Commerce-9
+ECSU1-Ecole Centrale-18
+FACU1-Facultés-17
+GPRO1-Gare de Pont Rousseau-1
+HODI1-Hôtel Dieu-8
+LCAR1-Le Cardo-25
+MGIN1-Mangin-4
+MICH1-Michelet-Sciences-15
+MORH1-Morrhonnière Petit Port-16
+MOTE1-Motte Rouge-13
+OGVA2-Orvault Grand Val-26
+PIRC1-Pirmil-3
+CRQU1-Place du Cirque-10
+PROU1-Pont Rousseau-2
+RTSC1-Recteur Schmitt-19
+RCAS1-René Cassin-24
+SFEL1-Saint Felix-14
+SMHI1-Saint Mihiel-12
+SADU1-Santos Dumont-22
+VGAC1-Vincent Gâche-6
+WATT1-Wattignies-5
+-- Line-3
+MAI81-8 Mai-8
+ADEL1-Aimé Delrue-14
+BALI1-Balinière-7
+BSEJ1-Beauséjour-25
+BNON1-Bignon-29
+BRTA1-Bretagne-17
+CREZ1-Château de Rezé-6
+COME1-Commerce-16
+DIDE1-Espace Diderot-5
+FFAU1-Felix Faure-21
+FERI1-Ferrière-27
+GDOU1-Grande Ouche-3
+HODI1-Hôtel Dieu-15
+JJNA1-Jean Jaurès-18
+JROS1-Jean Rostand-28
+COET1-Les Couëts-2
+LONG1-Longchamp-24
+MGIN1-Mangin-11
+MPAU2-Marcel Paul-32
+NETR1-Neustrie-1
+OMRL1-Orvault-Morlière-30
+PIRC1-Pirmil-10
+PSCE1-Plaisance-26
+POIT1-Poitou-20
+PROU1-Pont Rousseau-9
+RVAN1-Rond Point de Vannes-22
+SILL1-Sillon de Bretagne-31
+STHR1-Sainte Thérèse-23
+TROC1-Trocardière-4
+VIAR1-Viarme-Talensac-19
+VGAC1-Vincent Gâche-13
+WATT1-Wattignies-12
+-- Line-4
+BENA1-Beaulieu-6
+BGAR1-Bonne garde-8
+BODO1-Bourdonnières-11
+CVER1-Chapeau Verni-13
+CDCO1-Cité des Congrès-3
+CTOR1-Clos Toreau-9
+DCAN3-Duchesse Anne-2
+FOCH2-Foch-Cathédrale-1
+GNRA1-Greneraie-7
+IDNA1-Ile de Nantes-5
+JLVE1-Joliverie-12
+MRAI1-Maraîchers-14
+MVSI1-Mauvoisins-10
+PVTO1-Porte de Vertou-15
+TPOD1-Tripode-4
+-- Line-72
+BATI1-Batignolles-7
+BJOI6-Beaujoire-8
+BRLA1-Brouillard-15
+CTRE1-Chantrerie-18
+CPAU1-Christian Pauc-17
+CJOS1-Cimetière Saint Joseph-12
+ECSU4-Ecole Centrale-3
+EVET1-Ecole Vétérinaire-19
+GCHE1-Gachet 1-20
+GCHE2-Gachet 2-21
+FACU3-Facultés-1
+GCEN2-Grande Censive-4
+GMOL1-Guy Mollet-2
+LNTT3-Linot-11
+MDPO1-Moulin Porterie-16
+PLBL1-Port La Blanche-14
+POON1-Potiron-13
+RDPE1-Rendez-Vous des Pêcheurs-10
+RTSC4-Recteur Schmitt-5
+RVRE3-Riviere-6
+RSRA1-Roseraie-9
+-- Line-76
+BJOI4-Beaujoire-1
+BBON1-Boisbonne-18
+BIAN2-Briand-21
+BRLA1-Brouillard-8
+CACE3-Carquefou Centre-23
+CTRE1-Chantrerie-11
+CBEA2-Charbonneau-25
+CPAU1-Christian Pauc-10
+CJOS1-Cimetière Saint Joseph-5
+EVET1-Ecole Vétérinaire-12
+EDRE1-Erdreau-19
+FLEU1-Fleuriaye-20
+GCHE1-Gachet 1-13
+GCHE2-Gachet 2-14
+GBNI1-Guibliniere-15
+HVCQ1-Hôtel De Ville-24
+JVCA1-Jules Verne-22
+LNTT3-Linot-4
+MDPO1-Moulin de Porterie-9
+PLBL1-Port La Blanche-7
+PDOU1-Porte Douillard-16
+POON1-Potiron-6
+RDPE1-Rendez-Vous des Pêcheurs-3
+RSRA1-Roseraie-2
+SVAU1-Savaudière-17
+-- Line-11
+BRBI1-Bois Robillard-8
+BTIE1-Bottière-5
+BDRI1-Bourderies-35
+BTLE1-Bouteillerie-16
+CSTE1-Casterneau-13
+COME3-Commerce-22
+CVTI1-Convention-31
+XBON3-Croix Bonneau-37
+CUVI1-Cuvier-27
+DALB1-Dalby-12
+DEMO1-Desmoulins-9
+EGLI3-Egalité-32
+ECTE1-Enchanterie-10
+FLRI1-Floride-40
+FOCH3-Foch-Cathédrale-18
+GAMB1-Gambetta-15
+GRLI1-Graslin-23
+HVNA1-Hôtel de Ville-20
+JMLI3-Jean Moulin-36
+JEVV1-Jean V-24
+JVNA1-Jules Verne-1
+LIPP1-Lippmann-6
+MCHA3-Mairie de Chantenay-33
+MRRI1-Marrière-7
+MSLL2-Marseillaise-34
+MLLI1-Mellinet-28
+MITR1-Mitrie-11
+PATR2-Patis Rondin-2
+PBER1-Paul Bert-38
+PBRE1-Petit Breton-39
+PISE6-Pin Sec-4
+PIPA1-Pipay-14
+CRQU3-Place du Cirque-21
+PHVE2-Pré Hervé-3
+RBHI1-René Bouhier-26
+SNTA1-Saint Pierre-19
+STPI1-Sanitat-25
+TENA3-Tertre-41
+TBCH1-Trebuchet-17
+VCSO1-Vaucanson-29
+ZOLA1-Zola-30
+-- Line-99
+BAST2-Bastille-36
+BSOL1-Beau Soleil-26
+BVOI1-Beauvoir-28
+BLBO3-Bellevue-31
+BJLI1-Bois Jaulin-27
+BRDI1-Briandiere-15
+CQGU1-Chat-Qui-Guette-14
+CAUX1-Château D'Aux-20
+CLMO1-Cimetière La Montagne-17
+CLRO1-Clos Roux-5
+CLOT1-Clotais-10
+CTBO1-Coteaux-21
+XTRU1-Croix Truin-11
+EPEL1-Ecoles-3
+GAUT2-Gautellerie-35
+GIAR1-Gilarderie-18
+LMAR1-La Marche-23
+LMTA1-La Montagne-16
+LPEL1-Le Pellerin-2
+LPBA1-Le Pellerin Bac-1
+MROT1-Moulin Rotard-7
+NET10-Neustrie-37
+PGRI1-Pagerie-25
+PBFF1-Paimboeuf-30
+PB1B2-Parc Bouvre 1-32
+PB2B1-Parc Bouvre 2-33
+PTBO1-Petit Bois-19
+PIAO2-Piano'cktail-34
+POTT1-Pottier-29
+RAVA1-Ravardière-22
+RBAL1-Roche Ballue-24
+SJBO1-Saint Jean De Boiseau-9
+STBS1-Stade-12
+TLDI1-Télindière-8
+TEBS1-Tertre-6
+TEIF1-Tour Eiffel-4
+VFOU1-Vieux Four-13
+-- Line-C
+BATI2-Batignolles-11
+BJOI7-Beaujoire-10
+BRLA2-Brouillard-3
+CHRE2-Chalâtres-23
+CHZY2-Chanzy-26
+CPAU2-Christian Pauc-1
+CJOS2-Cim. St-Joseph-6
+DSAI2-Desaix-25
+ERDI3-Eraudière-16
+FOCH3-Foch-Cathédrale-28
+HVNA1-Hôtel de Ville-30
+KERE2-Keren-15
+LMNE3-Lemoine-20
+LNTT2-Linot-7
+MBZO2-Montbazon-21
+MDPO2-Moulin Porterie-2
+CRQU3-Place du Cirque-31
+PCVO2-Pontecorvo-14
+PBYE1-Port Boyer-17
+PLBL2-Port la Blanche-4
+POON2-Potiron-5
+PLGU1-Pouliguen-18
+RAZA2-Ranzay-12
+RPAR2-Rd-Pt de Paris-22
+RDPE2-RDV des Pêcheurs-8
+RNDI2-Renaudière-13
+RSRA2-Roseraie-9
+SCLE2-St-Clément-27
+SDON2-St-Donatien-24
+STPI1-St-Pierre-29
+TMSS1-Trémissinière-19
