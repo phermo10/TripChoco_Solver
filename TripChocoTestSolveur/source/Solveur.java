@@ -307,6 +307,8 @@ public class Solveur {
 				}
 			}
 		}
+		simple.setStations(stations);
+		simple.setTransports(transports);
 		// -------------------------
 
 

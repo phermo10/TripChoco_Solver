@@ -374,5 +374,7 @@ public class RESEAU_IMP implements RESEAU {
 	public void setStations(ArrayList<STATION> stations){this.stations = stations;}
 	
 	public String getCheminRep(){return this.CheminRep;}
-	
+	public void setTransports(ArrayList<TRANSPORT> transports){
+		this.transports = transports;
+	}
 }

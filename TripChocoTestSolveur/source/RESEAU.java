@@ -63,6 +63,7 @@ public interface RESEAU {
 	public int getNbNoeuds();
 	public int getNbArcs();
 	public void setStations(ArrayList<STATION> stations);
+	public void setTransports(ArrayList<TRANSPORT> transports);
 	public String getCheminRep();
 
 
