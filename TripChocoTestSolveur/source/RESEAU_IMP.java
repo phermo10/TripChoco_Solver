@@ -377,4 +377,8 @@ public class RESEAU_IMP implements RESEAU {
 	public void setTransports(ArrayList<TRANSPORT> transports){
 		this.transports = transports;
 	}
+	
+	private boolean coordsLoaded;
+	public boolean isCoordsLoaded(){return this.coordsLoaded;}
+	public void setCoordsLoaded(boolean loaded){this.coordsLoaded = loaded;}
 }

@@ -36,31 +36,30 @@ public class ITIN {
 	}
 
 	private void ordonnerEtapes(){
-		ArrayList<STATION> e = new ArrayList<STATION>();
+		ArrayList<STATION> etapesTriees = new ArrayList<STATION>();
 		etapes.remove(depart);
-		e.add(depart);
+		etapesTriees.add(depart);
+		double dMin = -1;
+		STATION pp = depart;
 		while(etapes.size()>0){
-			double dMin = -1;
-			STATION pp = depart;
+			dMin = -1;
 			for(STATION s : etapes){
-				if(!s.equals(arrivee)){
-					double d = s.getCoords().distance(pp.getCoords());
-					if(dMin == -1 || dMin > d){
-						dMin = d;
-						pp = s;
-					}
+				double d = s.getCoords().distance(pp.getCoords());
+				if(dMin == -1 || dMin > d){
+					dMin = d;
+					pp = s;
 				}
 			}
 			etapes.remove(pp);
-			e.add(pp);
+			etapesTriees.add(pp);
 		}
-		etapes.remove(arrivee);
-		e.add(arrivee);
-		etapes = e;
+		etapesTriees.add(arrivee);
+		etapes = etapesTriees;
 	}
 
 
 	public double getDistTot(){if(!isImpossible){if(lastSize!=etapes.size()){majDistanceTotale();}}return distanceTotale;}
+	
 	public int getDureeTot(int vitesse){
 		int dureeDesEtapes = 0;
 		for(STATION etape : etapes){
@@ -130,14 +129,47 @@ public class ITIN {
 		}
 		return ok;
 	}
+
+	public ArrayList<STATION> getEtapes(){
+		return etapes;
+	}
 	
-	public ArrayList<String> getEtapes(){
-		ArrayList<String> lesEtapes = new ArrayList<String>();
-		ordonnerEtapes();
-		for(STATION etape : etapes){
-			lesEtapes.add(etape.getNom());
+	public String toString(){
+		String s = "";
+		s = "Pour aller de " + depart.getNom() + " à " + arrivee.getNom();
+		if(isPossible()){
+		s+= " il faut passer par : ";
+		for(STATION e : etapes){
+			s+="\n" + e.getNom(); 
 		}
-		return lesEtapes;
+		s+="\n Distance à vol d'oiseau : " + depart.getCoords().distance(arrivee.getCoords());
+		}
+		else{ s+=" il n'existe pas de chemin.";}
+		return s;
+	}
+	
+	public String toBeautifulString(int vitesse){
+		String s = "Votre itineraire de " + depart.getNom() + " à " + arrivee.getNom() + " : ";
+		int dureeActuelle = 0;
+		double distanceActuelle = 0;
+		double distanceTmp = 0;
+		ordonnerEtapes();
+		dureeActuelle = depart.getDureeVisite();
+		s+="Visite de " + depart.getNom() + " : " + depart.getDureeVisite() + " Minutes";;
+		int i;
+		for(i=1; i<etapes.size()-1;i++){
+			distanceTmp = etapes.get(i-1).getCoords().distance(etapes.get(i).getCoords());
+			distanceActuelle += distanceTmp;
+			s+="\nMarchez " + distanceTmp + " km";
+			dureeActuelle += 60*distanceTmp/vitesse + etapes.get(i).getDureeVisite();
+			s+="\nVisite de " + etapes.get(i).getNom() + " : " + etapes.get(i).getDureeVisite() + " Minutes";;
+		}
+		s+="\nMarchez " + etapes.get(etapes.size()-2).getCoords().distance(arrivee.getCoords())
+		+"\nVisite de " + arrivee.getNom() + " : " + arrivee.getDureeVisite() + " Minutes"
+		+"\nVous êtes arrivés à destination."
+		+"\nDistance parcourue : " + distanceActuelle
+		+"\nTemps écoulé : " + dureeActuelle;
+		return s;
 	}
 
 }

@@ -1,6 +1,5 @@
 package source;
 
-import java.util.HashMap;
 
 /**
  * L'interface ARRET modelise un ''stop'' d'un transport sur une station. 

@@ -34,7 +34,6 @@ public class MinesTan {
 	 * @param args
 	 */
 	public static void main (String[] args){
-
 		System.out.println("Veuillez patienter, chargement du reseau...");
 		Date t1 = new Date(); // le constructeur par defaut de Date retourne l'instant actuel, voir javadoc
 		RESEAU tan = Fabrics.creerReseau("." + java.io.File.separator + "ressources" + java.io.File.separator); // RESEAU_IMP affichera ses propres messages d'erreurs 

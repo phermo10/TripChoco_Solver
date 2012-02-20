@@ -12,7 +12,7 @@ public class DialogMap extends JDialog {
 
 	private static final long serialVersionUID = 1L; // juste pour calmer java
 
-	private String[] result; // la liste des stations selectionnees
+	private STATION[] result; // la liste des stations selectionnees
 
 	/*public DialogMap(String title) {
 		this( title, null);
@@ -20,8 +20,8 @@ public class DialogMap extends JDialog {
 	/*public DialogMap( String title, ITIN itineraire) {
 		this((JFrame)null,title, itineraire, null);
 	}*/
-	public DialogMap( String title, ITIN itineraire, RESEAU network) {
-		this((JFrame)null,title, itineraire, network);
+	public DialogMap( String title, ITIN itineraire, RESEAU network, int vitesse, int scoreMax) {
+		this((JFrame)null,title, itineraire, network, vitesse, scoreMax);
 	}
 	
 	/**
@@ -32,12 +32,12 @@ public class DialogMap extends JDialog {
 	 * @param itineraire, Si itineraire ne vaut pas null, la boite de dialogue affiche le plan du reseau et des points rouges pour marquer les stations de l'itineraire.
 	 * Si par contre itineraire vaut null, la boite de dialogue va permettre de selectionner des stations.
 	 */
-	public DialogMap(JFrame parent, String title, ITIN itineraire, RESEAU network) {
+	public DialogMap(JFrame parent, String title, ITIN itineraire, RESEAU network, int vitesse, int scoreMax) {
 		super(parent, title, true);
 		
 		// la boite de dialogue n'est composee que d'une instance de map
 		setLayout(new BorderLayout());
-		Map m = new Map(this, itineraire, network); //, res
+		Map m = new Map(this, itineraire, network, vitesse, scoreMax); //, res
 		getContentPane().add(m, BorderLayout.CENTER);
 
 		// On va dimensionner la fenetre pour qu'elle occupe initialement l'integralite de l'espace disponible		
@@ -45,7 +45,7 @@ public class DialogMap extends JDialog {
 		GraphicsConfiguration gconf = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
 		Insets insets = java.awt.Toolkit.getDefaultToolkit().getScreenInsets(gconf); // marges occupees par le systeme (barre d'outil, barre des taches, ...
 
-		result = new String[2];
+		result = new STATION[2];
 		result[0] = null;
 		result[1]=null;
 		
@@ -57,7 +57,7 @@ public class DialogMap extends JDialog {
 	/** Accesseur permettant a l'instance de map de mettre a jour le resultat (la liste des stations selectionnees).
 	 *  Notez que le resultat etant a present connu, on masque la boite de dialogue.
 	 */
-	public void setResult( String[] t) {
+	public void setResult(STATION[] t) {
 		this.result = t;
 		this.setVisible(false);
 	}
@@ -66,7 +66,7 @@ public class DialogMap extends JDialog {
 	 * Accesseur permettant de recuperer le resultat, c'est a dire la liste des stations selectionnees
 	 * @return
 	 */
-	public String[] getResult() {
+	public STATION[] getResult() {
 		return this.result;
 	}
 	

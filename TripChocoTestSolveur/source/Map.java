@@ -74,7 +74,7 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 
 
 	public static final String FICHIER_IMAGE = "map.jpg"; // fichier contenant l'image du reseau
-	public static final String FICHIER_COORDONNEES = "coordonnees.txt"; // fichier contenant les coordonnees des stations
+	//public static final String FICHIER_COORDONNEES = "coordonnees.txt"; // fichier contenant les coordonnees des stations
 
 	// VARIABLES D'INSTANCE
 	private MediaTracker tracker; // pour atteindre la fin du chargement des images
@@ -95,8 +95,8 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 	 */
 	private double leZoom;
 
-	private ArrayList<String> stations;    // les noms des stations
-	private ArrayList<Point> coordonnees ; // les coordonnees des stations
+	//private ArrayList<String> stations;    // les noms des stations
+	//private ArrayList<Point> coordonnees ; // les coordonnees des stations
 	public final ITIN itineraire; // la liste des noms de station de l'itineraire a afficher
 
 	private DialogMap dialog; // la dialogMap dont on fait partie
@@ -114,7 +114,7 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 	/**
 	 * la selection de noms de stations
 	 */
-	private String[] result;
+	private STATION[] result;
 
 	/**
 	 * true si la dialogMap est utilisee pour selectionner des stations de depart et d'arrivee
@@ -122,22 +122,26 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 	 */
 	private boolean jeSersASelectionnerLesStations; 
 	private RESEAU network;
+	private int scoreMax;
 
 
-	public Map(DialogMap d, ITIN  itin, RESEAU network) {
+	private STATION hoveredStation;
+
+	public Map(DialogMap d, ITIN  itin, RESEAU network, int vitesse, int scoreMax) {
 		this.dialog = d;
 		this.itineraire = itin;
 		this.network = network;
 		this.jeSersASelectionnerLesStations = itineraire==null;
-		/*if(!jeSersASelectionnerLesStations){
-			setToolTipText(itineraire.toHtml());
-		}*/
-		this.coordonnees = new ArrayList<Point>();
-		this.stations = new ArrayList<String>();
-		this.charger(); // consulte le fichier de coordonnees afin de mettre a jour les coordonnees et les noms des stations
-		result = new String[2]; // car ne contiendra que la station de depart et d'arrivee
+		this.scoreMax = scoreMax;
+		if(!jeSersASelectionnerLesStations){
+			setToolTipText(itineraire.toBeautifulString(vitesse));
+		}
+		//this.coordonnees = new ArrayList<Point>();
+		//this.stations = new ArrayList<String>();
+		//this.charger(); // consulte le fichier de coordonnees afin de mettre a jour les coordonnees et les noms des stations
+		result = new STATION[2]; // car ne contiendra que la station de depart et d'arrivee
 		result[0] = null;
-		result[1]=null;
+		result[1]= null;
 
 		this.leZoom = 0;
 
@@ -163,7 +167,7 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 	/**
 	 * Consulte le fichier de coordonnes afin de mettre a jour la liste des noms de station et leurs coordonnees
 	 */
-	private void charger() {
+	/*private void charger() {
 
 		BufferedReader br;
 		try {
@@ -179,7 +183,7 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	public void chargerImages() {
 		// Creation de oofscreen pour le double buffering
@@ -273,43 +277,41 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 			// on va tout effectuer sur bufferGraphics avant d'afficher bufferGraphics sur g
 			bufferGraphics = offscreen.getGraphics(); 
 			bufferGraphics.drawImage(carte, this.x, this.y, largeur, hauteur, this);
-			if(!jeSersASelectionnerLesStations){
-				ArrayList<String> lesStations = itineraire.getEtapes();
-				for(int j = 0; j<lesStations.size();j++){
-					int index = stations.indexOf(lesStations.get(j));
-					if(index>-1){
-						Point A = mettreALEchelle(coordonnees.get(index));
-						Point M = new Point(x+A.x,y+A.y);
-
-						//Affichage de l'horaire
-						bufferGraphics.setFont(new Font(bufferGraphics.getFont().getName(), Font.BOLD, tailleCaracteresHeures));
-						bufferGraphics.setColor(couleurDesTextes);
-						//bufferGraphics.drawString(itineraire.getHoraires().get(j)[0] + "h" + itineraire.getHoraires().get(j)[1] +"m", M.x - rayonCercleStation, M.y - rayonCercleStation + 2);
-
-						// La boucle est là pour donner un simulacre d'épaisseur au cercle..... Même si ça rend plutot moche.
-						for(int i = 0;i<=epaisseurCercleStation;i++){
-							bufferGraphics.drawOval(M.x - rayonCercleStation+i/2, M.y - rayonCercleStation+i/2, 2*(rayonCercleStation - i/2), 2*(rayonCercleStation - i/2));
-						}
-
-						// Normalement ne devrait jamais arriver tant que le fichier coordonnees est a jour
-					}else{System.out.println(lesStations.get(j) + " n'est pas dans les stations");System.out.println(stations);}
+			// Affichage des noeuds et des arcs du réseau
+			for(STATION s1 : this.network.getListeStations()){
+				Point p1 = mettreALEchelle(s1.getCoords());
+				Point m1 = new Point(x+p1.x,y+p1.y);
+				for(STATION s2 : s1.getSommetsAtteignables(this.network)){
+					Point p2 = mettreALEchelle(s2.getCoords());
+					Point m2 = new Point(x+p2.x,y+p2.y);
+					((Graphics2D) bufferGraphics).setStroke(new BasicStroke(5));
+					bufferGraphics.setColor(Color.RED);
+					bufferGraphics.drawLine(m1.x, m1.y, m2.x, m2.y);
 				}
-			}else{
-				for(STATION s1 : this.network.getListeStations()){
-					Point p1 = mettreALEchelle(s1.getCoords());
-					Point m1 = new Point(x+p1.x,y+p1.y);
-					for(STATION s2 : s1.getSommetsAtteignables(this.network)){
+				// Cercle de rayon proportionnel au score
+				int RayonScoreMax = 10;
+				int r = s1.getScore()*RayonScoreMax/scoreMax;
+				bufferGraphics.setColor(Color.BLUE);
+				((Graphics2D) bufferGraphics).setStroke(new BasicStroke(3));
+				bufferGraphics.drawOval(m1.x - r, m1.y-r, 2*r, 2*r);
+			}
+			// -------
 
-						Point p2 = mettreALEchelle(s2.getCoords());
-						Point m2 = new Point(x+p2.x,y+p2.y);
-						((Graphics2D) bufferGraphics).setStroke(new BasicStroke(5));
-						bufferGraphics.setColor(Color.RED);
-						bufferGraphics.drawLine(m1.x, m1.y, m2.x, m2.y);
+			if(!jeSersASelectionnerLesStations){
+				for(STATION etape : itineraire.getEtapes()){
+					Point A = mettreALEchelle(etape.getCoords());
+					Point M = new Point(x+A.x,y+A.y);
+
+					//Affichage de l'horaire
+
+					bufferGraphics.setColor(Color.GREEN);
+					//bufferGraphics.setFont(new Font(bufferGraphics.getFont().getName(), Font.BOLD, tailleCaracteresHeures));
+					//bufferGraphics.drawString(itineraire.getHoraires().get(j)[0] + "h" + itineraire.getHoraires().get(j)[1] +"m", M.x - rayonCercleStation, M.y - rayonCercleStation + 2);
+
+					// La boucle est là pour donner un simulacre d'épaisseur au cercle..... Même si ça rend plutot moche.
+					for(int i = 0;i<=epaisseurCercleStation;i++){
+						bufferGraphics.drawOval(M.x - rayonCercleStation+i/2, M.y - rayonCercleStation+i/2, 2*(rayonCercleStation - i/2), 2*(rayonCercleStation - i/2));
 					}
-					int r = 3;
-					bufferGraphics.setColor(Color.BLUE);
-					((Graphics2D) bufferGraphics).setStroke(new BasicStroke(3));
-					bufferGraphics.drawOval(m1.x - r, m1.y-r, 2*r, 2*r);
 				}
 			}
 
@@ -340,12 +342,14 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 
 	public void  mouseClicked(MouseEvent e) {
 		if(jeSersASelectionnerLesStations){
-			String titre = dialog.getTitle();
-			if(result[0]==null&&stations.contains(titre)){result[0]=titre;}
-			else{
-				if(!result[0].equals(titre)&&stations.contains(titre)){
-					result[1]=titre;dialog.setResult(result);}
-			}				
+			if(hoveredStation!=null){
+				if(result[0]==null)
+					result[0]=hoveredStation;
+				else{
+					result[1]=hoveredStation;
+					dialog.setResult(result);
+				}
+			}			
 		}
 	}
 
@@ -363,17 +367,18 @@ public class Map extends JPanel implements   MouseListener, ActionListener, Mous
 	public void mouseMoved(MouseEvent e) {
 		if(jeSersASelectionnerLesStations){
 			double dMin = -1;
-			String plusProche = "";
-			for(int i=0; i<stations.size();i++){
-				Point p = mettreALEchelle(coordonnees.get(i));
+			STATION plusProche = null;
+			for(STATION s : network.getListeStations()){
+				Point p = mettreALEchelle(s.getCoords());
 				p = new Point(p.x + x, p.y + y);
-				double d = Math.abs(Point.distance(e.getX(), e.getY(), p.getX(), p.getY()));
+				double d = p.distance(new Point(e.getX(), e.getY()));
 				if(dMin==-1||d<dMin){
 					dMin=d;
-					plusProche=stations.get(i);
+					plusProche=s;
 				}
 			}
-			dialog.setTitle(plusProche);
+			hoveredStation = plusProche;
+			if(plusProche!=null)dialog.setTitle(plusProche.getNom());
 		}
 	}
 

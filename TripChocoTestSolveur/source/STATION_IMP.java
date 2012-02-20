@@ -32,8 +32,8 @@ public class STATION_IMP implements STATION {
 	}
 
 	public boolean equals(Object o){
-		if(o instanceof STATION_IMP){
-			STATION_IMP s = (STATION_IMP)o;
+		if(o instanceof STATION){
+			STATION s = (STATION)o;
 			boolean testCoords = true;
 			if(s.getCoords()!=null && getCoords()!=null){
 				testCoords = s.getCoords().equals(getCoords());
@@ -58,6 +58,7 @@ public class STATION_IMP implements STATION {
 	private Point coords;
 	public void setCoords(Point p){this.coords = p;updateModifs();}
 	public Point getCoords(){return this.coords;}
+
 	public ArrayList<STATION> getSommetsAtteignables(RESEAU graph){
 		updateModifs();
 		ArrayList<STATION> att = new ArrayList<STATION>();
@@ -65,14 +66,9 @@ public class STATION_IMP implements STATION {
 			ARRET suiv = a.getSuiv();
 			if(suiv!=null){
 				STATION s = suiv.getStation();
-				if(!att.contains(s)&&!s.equals(this)){
-					boolean ok = false;
-					for(int i = 0; i<graph.getListeStations().size()&&!ok;i++){
-						if(graph.getListeStations().get(i).equals(s)){
-							ok = true;
-							att.add(graph.getListeStations().get(i));
-						}	
-					}
+				if(!s.equals(this)&&!att.contains(s)){
+					int index = graph.getListeStations().indexOf(s);
+					if(index>-1) att.add(graph.getListeStations().get(index));
 				}
 			}
 		}
@@ -84,13 +80,13 @@ public class STATION_IMP implements STATION {
 			a.setStation(this);
 		}
 	}
-	
+
 	public int hashCode(){
-		return 3*getNom().hashCode() + 7 * getCoords().x + 11 * getCoords().y;
+		return 3*getNom().hashCode() + (getCoords()!=null?7 * getCoords().x + 11 * getCoords().y:0);
 	}
-	
+
 	private int dureeVisite;
 	public void setDureeVisite(int duree){this.dureeVisite = duree;}
 	public int getDureeVisite(){return this.dureeVisite;}
-	
+
 }

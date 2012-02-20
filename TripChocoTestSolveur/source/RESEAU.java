@@ -65,6 +65,8 @@ public interface RESEAU {
 	public void setStations(ArrayList<STATION> stations);
 	public void setTransports(ArrayList<TRANSPORT> transports);
 	public String getCheminRep();
+	public boolean isCoordsLoaded();
+	public void setCoordsLoaded(boolean loaded);
 
 
 }
